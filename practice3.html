@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice3</title>
+    <script>
+        function checkPswd(){
+            var ta1 = document.getElementById("ta1")
+            var ta2 = document.getElementById("ta2")
+            var checked = document.getElementById("checked")
+
+            var t1 = ta1.value
+            var t2 = ta2.value
+
+            if (t1 == t2)
+            {
+                if (t1.length >= 8 && t2.length >= 8)
+                {
+                    checked.innerText = "Valid"
+                    return;
+                }
+            }
+            checked.innerText = "Not Valid"
+        };
+    </script>
+</head>
+<body>
+    <h3>Password Checker. Enter a password twice to verify.</h3>
+    <input id="ta1" oninput="checkPswd()">
+    <div></div>
+    <input id="ta2" oninput="checkPswd()">
+    <p id="checked">Checking...</p>
+</body>
+</html>
